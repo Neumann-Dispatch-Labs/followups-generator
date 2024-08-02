@@ -1,5 +1,5 @@
 const path = require('path');
-const { app, BrowserWindow, ipcMain } = require('electron');
+const { app, BrowserWindow, ipcMain, Menu } = require('electron');
 const fs = require('fs');
 
 function createWindow() {
@@ -16,6 +16,9 @@ function createWindow() {
   });
 
   mainWindow.loadFile('web/index.html');
+
+  
+  Menu.setApplicationMenu(null);
 }
 
 app.whenReady().then(() => {
