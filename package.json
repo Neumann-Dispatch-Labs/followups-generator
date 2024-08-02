@@ -1,0 +1,33 @@
+{
+  "name": "followupsapp",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^24.0.0",
+    "electron-builder": "^24.0.0"
+  },
+  "build": {
+    "appId": "com.neumanndispatch.followupsapp",
+    "productName": "FollowUpsApp",
+    "files": [
+      "web/**/*",
+      "main.js",
+      "preload.js",
+      "assets/**/*"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "icon": "assets/tricon.ico",
+      "target": [
+        "nsis",
+        "zip"
+      ]
+    }
+  }
+}

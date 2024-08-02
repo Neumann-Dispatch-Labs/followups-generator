@@ -15,8 +15,7 @@ function showNotification(message, type = 'info') {
 
 async function loadTrucks() {
     try {
-        const response = await fetch(dbFolder + dbFile);
-        trucks = await response.json();
+        trucks = await window.electron.readTrucks();
     } catch (error) {
         console.error('Error loading trucks:', error);
         trucks = {};
@@ -27,19 +26,14 @@ async function loadTrucks() {
 
 async function saveTrucks() {
     try {
-        await fetch(dbFolder + dbFile, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(trucks),
-        });
+        await window.electron.writeTrucks(trucks);
         showNotification('Trucks saved successfully.', 'success');
     } catch (error) {
         console.error('Error saving trucks:', error);
         showNotification('Error saving trucks. Please try again.', 'danger');
     }
 }
+
 
 function updateTruckList() {
     const truckList = document.getElementById('truckList');
