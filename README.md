@@ -4,6 +4,8 @@ This project aims to simplify shift change tasks where dispatch team writes note
 
 ## Screenshots
 
+![image](https://github.com/user-attachments/assets/bb644d81-8ac3-47ff-8442-a083fba2995a)
+
 ![image](https://github.com/user-attachments/assets/9c045627-15c9-4ccc-8254-3fba5fff825a)
 
 ![image](https://github.com/user-attachments/assets/2a3d3017-6bd4-40fb-bbe9-34dac9025f32)
