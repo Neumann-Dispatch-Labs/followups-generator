@@ -1,0 +1,35 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 60px;
+}
+
+.status-Rolling { color: #90EE90; }
+.status-Stopped { color: #FFB6C1; }
+.status-Hometime, .status-Ready { color: #FF6347; }
+.status-Upcoming, .status-Deadhead { color: #FFD700; }
+
+.fade-in {
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.slide-in {
+    animation: slideIn 0.3s;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+#notification {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    z-index: 1050;
+    max-width: 300px;
+}
